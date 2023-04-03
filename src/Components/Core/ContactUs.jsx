@@ -10,6 +10,7 @@ import {
 import Header from "./Header";
 import Footer from "./Footer";
 import LoadingAnimation from "../Stores/LoadingAnimation";
+import Main from "./Main";
 
 const useStyles = makeStyles({
   root: {
@@ -42,10 +43,9 @@ const ContactUs = () => {
     }, 2000);
   }, []);
   return (
-    <>
-        <Header/>
-    {isLoading? <LoadingAnimation/> :
-    <Container maxWidth="md" className={classes.root}>
+    <Main>
+    {isLoading?        <LoadingAnimation paddingTop={50}  /> :
+    <Container sx={{ py: 3}} maxWidth="md" className={classes.root}>
       <Typography variant="h4" component="h1" className={classes.title}>
         Contact Us
       </Typography>
@@ -64,13 +64,12 @@ const ContactUs = () => {
           rows={4}
           required
         />
-        <Button type="submit" variant="contained" color="primary">
+        <Button type="submit" variant="contained" color="primary" style={{color: 'white'}}>
           Submit
         </Button>
       </Box>
     </Container>}
-    <Footer/>
-    </>
+    </Main>
   );
 };
 

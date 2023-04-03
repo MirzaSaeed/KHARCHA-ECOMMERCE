@@ -11,13 +11,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LoadingAnimation = () => {
+const LoadingAnimation = ({paddingTop, paddingBottom}) => {
   const classes = useStyles();
 
   return (
     <>
       {
-        <div className={classes.root} style={{ paddingTop: 25 + "%" }}>
+        <div className={classes.root} style={{ paddingTop: `${paddingTop}vh`,paddingBottom: `${paddingBottom}vh`}}>
           <CircularProgress color="inherit" />
         </div>
       }

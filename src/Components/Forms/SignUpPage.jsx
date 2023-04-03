@@ -10,10 +10,10 @@ import {
   MenuItem,
   InputLabel,
 } from "@mui/material";
-import Header from "../Core/Header";
 import LoadingAnimation from "../Stores/LoadingAnimation";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { Box, Container } from "@mui/system";
+import Main from "../Core/Main";
 
 const SignUpPage = () => {
   const [user, setUser] = useState({
@@ -48,10 +48,9 @@ const SignUpPage = () => {
   }, []);
 
   return (
-    <>
-      <Header />
+    <Main>
       {isLoading ? (
-        <LoadingAnimation />
+        <LoadingAnimation paddingTop={50}  />
       ) : (
         <Container maxWidth="md">
           <Box
@@ -188,7 +187,7 @@ const SignUpPage = () => {
           </Box>
         </Container>
       )}
-    </>
+    </Main>
   );
 };
 export default SignUpPage;

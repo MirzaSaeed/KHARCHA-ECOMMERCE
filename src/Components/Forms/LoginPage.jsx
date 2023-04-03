@@ -14,6 +14,7 @@ import LoadingAnimation from "../Stores/LoadingAnimation";
 import Header from "../Core/Header";
 import Footer from "../Core/Footer";
 import { NavLink } from "react-router-dom";
+import Main from "../Core/Main";
 
 const LoginPage = () => {
   
@@ -33,10 +34,9 @@ const LoginPage = () => {
   }, []);
 
   return (
-    <>
-      <Header />
+    <Main>
       {isLoading ? (
-        <LoadingAnimation />
+        <LoadingAnimation paddingTop={50}  />
       ) : (
         <Container maxWidth="md">
           <Box
@@ -109,8 +109,7 @@ const LoginPage = () => {
           </Box>
         </Container>
       )}
-      <Footer />
-    </>
+    </Main>
   );
 };
 

@@ -2,15 +2,8 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
-  root: {
-    width: "100%",
-    position: "fixed",
-    bottom: 0,
-  },
+  
   text: {
-    width: "100%",
-    position: "fixed",
-    bottom: 0,
     textAlign: "center",
   },
 });
