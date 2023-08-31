@@ -38,7 +38,7 @@ const IsLoginIn = () => {
       <Box sx={{ flexGrow: 0 }}>
         <Tooltip title={!isLogin ? "Account Detail" : "SignIn "}>
           {isLogin ? (
-            <IconButton onClick={handleOpenUserMenu}   >
+            <IconButton onClick={handleOpenUserMenu}>
               <Avatar
                 sx={{ width: 30, height: 30 }}
                 alt="Remy Sharp"
@@ -52,7 +52,7 @@ const IsLoginIn = () => {
             >
               <IconButton
                 sx={{
-                  color: "#d798a2",
+                  color: "#fff",
                   ":hover": {
                     color: "#fff",
                     fontWeight: "medium",
@@ -82,8 +82,14 @@ const IsLoginIn = () => {
           onClose={handleCloseUserMenu}
         >
           {settings.map((setting) => (
-            <MenuItem sx={{mx:1}} key={setting} onClick={handleCloseUserMenu}>
-              <Typography sx={{borderRadius:2}} textAlign="center">{setting}</Typography>
+            <MenuItem
+              sx={{ mx: 1 }}
+              key={setting}
+              onClick={handleCloseUserMenu}
+            >
+              <Typography sx={{ borderRadius: 2 }} textAlign="center">
+                {setting}
+              </Typography>
             </MenuItem>
           ))}
         </Menu>

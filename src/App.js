@@ -7,21 +7,21 @@ import AboutUs from "./Components/Core/AboutUs";
 import ContactUs from "./Components/Core/ContactUs";
 import LoginPage from "./Components/Forms/LoginPage";
 import SignUpPage from "./Components/Forms/SignUpPage";
-import './App.css';
+import "./App.css";
 import ProductDetail from "./Components/Core/ProductDetail";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#d798a2",
-      headingFont: "#d798a2",
+      main: "#fff",
+      headingFont: "#fff",
     },
   },
 });
 
 function App() {
   return (
-    <ThemeProvider theme={theme} >
+    <ThemeProvider theme={theme}>
       <LoadingContext.Provider>
         <Routes>
           <Route path="/" element={<LandingPage />} />

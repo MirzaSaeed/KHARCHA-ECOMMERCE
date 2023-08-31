@@ -26,15 +26,15 @@ const ProductList = () => {
   };
 
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={4}>
       {products.map((product) => (
         <Grid item xs={12} md={6} lg={4} key={product.id}>
           <Card>
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="200"
-                image={product.thumbnail}
+                height="500"
+                image={product.image}
                 alt={product.title}
               />
               <CardContent>

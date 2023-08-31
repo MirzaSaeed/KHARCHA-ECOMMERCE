@@ -135,7 +135,7 @@ const Header = ({ children }) => {
         {navItems.map((item) => (
           <ListItem
             sx={{
-              color: "#d798a2",
+              color: "#fff",
               ":hover": {
                 color: "#fff",
                 fontWeight: "medium",
@@ -175,7 +175,7 @@ const Header = ({ children }) => {
           >
             <MenuIcon
               sx={{
-                color: "#d798a2",
+                color: "#fff",
                 ":hover": {
                   color: "#fff",
                   fontWeight: "medium",
@@ -195,20 +195,20 @@ const Header = ({ children }) => {
               display: { xs: "none", sm: "block" },
             }}
           >
-            <Link style={{ textDecoration: "none", color: "#d798a2" }} to="/">
-              KHARCHA
+            <Link style={{ textDecoration: "none", color: "#fff" }} to="/">
+              SALEBOOK
             </Link>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link
-                style={{ textDecoration: "none", color: "#d798a2" }}
+                style={{ textDecoration: "none", color: "#fff" }}
                 to="/contact"
               >
                 <Button
                   key={item}
                   sx={{
-                    color: "#d798a2",
+                    color: "#fff",
                     ":hover": {
                       color: "#fff",
                       fontWeight: "medium",
@@ -243,9 +243,7 @@ const Header = ({ children }) => {
           </Box>
 
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-            
-            </div>
+            <div className={classes.searchIcon}></div>
             <InputBase
               sx={{
                 color: "#fff",
@@ -259,14 +257,20 @@ const Header = ({ children }) => {
               inputProps={{ "aria-label": "search" }}
             />
           </div>
-          <IconButton  sx={{
-                  color: "#d798a2",
-                  ":hover": {
-                    color: "#fff",
-                    fontWeight: "medium",
-                    bgcolor: "#dda7b0",
-                  }}} size="small" aria-label="search" color="inherit">
-            <SearchIcon  />
+          <IconButton
+            sx={{
+              color: "#fff",
+              ":hover": {
+                color: "#fff",
+                fontWeight: "medium",
+                bgcolor: "#dda7b0",
+              },
+            }}
+            size="small"
+            aria-label="search"
+            color="inherit"
+          >
+            <SearchIcon />
           </IconButton>
           {children}
         </Toolbar>

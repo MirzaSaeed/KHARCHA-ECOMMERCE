@@ -55,11 +55,10 @@ const LandingPage = () => {
   return (
     <Main>
       {isLoading ? (
-        <LoadingAnimation paddingTop={50}  />
+        <LoadingAnimation paddingTop={50} />
       ) : (
         <Box className={classes.scroller}>
           <div>
-            
             <HeroBackground>
               <Typography variant="h2" color="#F0f9fa" align="center">
                 Welcome to our online store!
@@ -71,10 +70,10 @@ const LandingPage = () => {
             <Typography variant="h4" align="center">
               Featured Products
             </Typography>
-            <Grid container spacing={1} sx={{ ml:0.5, mt: 2 }}>
+            <Grid spacing={1} sx={{ ml: 0.5, mt: 2 }}>
               <ProductList />
             </Grid>
-            
+
             <Typography variant="h4" align="center"></Typography>
           </Container>
         </Box>
